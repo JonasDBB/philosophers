@@ -1,1 +1,3 @@
-# philosophers
+philosophers project
+
+*Work in progress*
