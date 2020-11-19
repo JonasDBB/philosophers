@@ -6,15 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/Users/jbennink/Documents/Projects/philosophers/philo_one/ft_atoi.c
-
-/Users/jbennink/Documents/Projects/philosophers/philo_one/main.c
+/home/jonasbb/Documents/Projects/philosophers/philo_one/main.c
 unistd.h
 -
 stdio.h
 -
+stdlib.h
+-
+pthread.h
+-
+sys/time.h
+-
 philosophers.h
-/Users/jbennink/Documents/Projects/philosophers/philo_one/philosophers.h
+/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
 
-/Users/jbennink/Documents/Projects/philosophers/philo_one/philosophers.h
+/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
+stdbool.h
+-
+pthread.h
+-
 

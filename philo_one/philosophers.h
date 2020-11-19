@@ -19,6 +19,8 @@ typedef struct	s_arrgs {
 	int	eat_t;
 	int	sleep_t;
 	int	times_eat;
+	pthread_mutex_t	*forks;
+	int	philo_nr;
 }				t_arrgs;
 
 int		ft_atoi(const char *str);
