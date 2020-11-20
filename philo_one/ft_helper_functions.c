@@ -36,10 +36,10 @@ void	write_lock(unsigned int philo_id, const char *str, t_arrgs *args)
 {
 	unsigned long	time;
 
-	pthread_mutex_lock(&g_dead_lock);
+//	pthread_mutex_lock(&g_dead_lock);
 	if (g_dead)
 		return ;
-	pthread_mutex_unlock(&g_dead_lock);
+//	pthread_mutex_unlock(&g_dead_lock);
 	time = gettime() - args->start_t;
 	pthread_mutex_lock(&args->write_lock);
 	ft_putnbr(time);

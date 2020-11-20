@@ -62,13 +62,15 @@ int 	check_and_set_input(int ac, char **av, t_arrgs *args)
 
 void	faksleep(unsigned int sleep_t)
 {
-	unsigned int zzz;
+//	unsigned int zzz;
+	unsigned long start;
 
-	zzz = 0;
-	while (zzz < sleep_t)
+//	zzz = 0;
+	start = gettime();
+	while ((gettime() - start) < sleep_t)
 	{
 		usleep(100);
-		zzz += 100;
+//		zzz += 100;
 	}
 }
 
@@ -83,11 +85,13 @@ void	*do_de_ting(void *phil)
 	id = philo->philo_nr;
 	right_fork = &philo->args->forks[id];
 	left_fork = &philo->args->forks[(id + 1) % philo->args->n_philos];
-	if (id % 2)
-		usleep(100);
+//	if (id % 2)
+//		usleep(100);
 	int i = 0;
 	while (i != philo->args->times_eat)
 	{
+		if (i)
+			write_lock(id, "is thinking", philo->args);
 		// pickup forks
 		if (g_dead)
 		{
@@ -114,7 +118,8 @@ void	*do_de_ting(void *phil)
 		pthread_mutex_unlock(&philo->time_check_lock);
 		philo->times_eaten++;
 		write_lock(id, "is eating", philo->args);
-		usleep(philo->args->eat_t * 1000);
+//		usleep(philo->args->eat_t * 1000);
+		faksleep(philo->args->eat_t);
 		// drop forks
 		pthread_mutex_unlock(left_fork);
 		write_lock(id, "dropped up left fork", philo->args);
@@ -126,8 +131,8 @@ void	*do_de_ting(void *phil)
 			return (NULL);
 		}
 		write_lock(id, "is sleeping", philo->args);
-		usleep(philo->args->sleep_t * 1000);
-		write_lock(id, "is thinking", philo->args);
+//		usleep(philo->args->sleep_t * 1000);
+		faksleep(philo->args->sleep_t);
 		i++;
 	}
 	return (NULL);
@@ -146,7 +151,7 @@ int		main(int ac, char **av)
 	threads = malloc(sizeof(pthread_t) * args.n_philos);
 	philos = malloc(sizeof(t_philo) * args.n_philos);
 	i = 0;
-	pthread_mutex_init(&g_dead_lock, NULL);
+//	pthread_mutex_init(&g_dead_lock, NULL);
 	while (i < args.n_philos)
 	{
 		pthread_mutex_init(&args.forks[i], NULL);
@@ -198,7 +203,7 @@ int		main(int ac, char **av)
 	i = 0;
 	pthread_mutex_destroy(&args.write_lock);
 	pthread_mutex_destroy(&philos[i].time_check_lock);
-	pthread_mutex_destroy(&g_dead_lock);
+//	pthread_mutex_destroy(&g_dead_lock);
 	while (i < args.n_philos)
 	{
 		pthread_mutex_destroy(&args.forks[i]);
