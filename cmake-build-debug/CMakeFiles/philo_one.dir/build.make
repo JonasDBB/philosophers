@@ -90,29 +90,29 @@ CMakeFiles/philo_one.dir/philo_one/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_one.dir/philo_one/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jonasbb/Documents/Projects/philosophers/philo_one/main.c -o CMakeFiles/philo_one.dir/philo_one/main.c.s
 
-CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.o: CMakeFiles/philo_one.dir/flags.make
-CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.o: ../philo_one/ft_atoi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.o   -c /home/jonasbb/Documents/Projects/philosophers/philo_one/ft_atoi.c
+CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o: CMakeFiles/philo_one.dir/flags.make
+CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o: ../philo_one/ft_helper_functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o   -c /home/jonasbb/Documents/Projects/philosophers/philo_one/ft_helper_functions.c
 
-CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jonasbb/Documents/Projects/philosophers/philo_one/ft_atoi.c > CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.i
+CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jonasbb/Documents/Projects/philosophers/philo_one/ft_helper_functions.c > CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.i
 
-CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jonasbb/Documents/Projects/philosophers/philo_one/ft_atoi.c -o CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.s
+CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jonasbb/Documents/Projects/philosophers/philo_one/ft_helper_functions.c -o CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.s
 
 # Object files for target philo_one
 philo_one_OBJECTS = \
 "CMakeFiles/philo_one.dir/philo_one/main.c.o" \
-"CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.o"
+"CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o"
 
 # External object files for target philo_one
 philo_one_EXTERNAL_OBJECTS =
 
 philo_one: CMakeFiles/philo_one.dir/philo_one/main.c.o
-philo_one: CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.o
+philo_one: CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o
 philo_one: CMakeFiles/philo_one.dir/build.make
 philo_one: CMakeFiles/philo_one.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable philo_one"

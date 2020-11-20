@@ -143,32 +143,32 @@ philo_one/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/build
 .PHONY : philo_one/fast
 
-philo_one/ft_atoi.o: philo_one/ft_atoi.c.o
+philo_one/ft_helper_functions.o: philo_one/ft_helper_functions.c.o
 
-.PHONY : philo_one/ft_atoi.o
+.PHONY : philo_one/ft_helper_functions.o
 
 # target to build an object file
-philo_one/ft_atoi.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.o
-.PHONY : philo_one/ft_atoi.c.o
+philo_one/ft_helper_functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o
+.PHONY : philo_one/ft_helper_functions.c.o
 
-philo_one/ft_atoi.i: philo_one/ft_atoi.c.i
+philo_one/ft_helper_functions.i: philo_one/ft_helper_functions.c.i
 
-.PHONY : philo_one/ft_atoi.i
+.PHONY : philo_one/ft_helper_functions.i
 
 # target to preprocess a source file
-philo_one/ft_atoi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.i
-.PHONY : philo_one/ft_atoi.c.i
+philo_one/ft_helper_functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.i
+.PHONY : philo_one/ft_helper_functions.c.i
 
-philo_one/ft_atoi.s: philo_one/ft_atoi.c.s
+philo_one/ft_helper_functions.s: philo_one/ft_helper_functions.c.s
 
-.PHONY : philo_one/ft_atoi.s
+.PHONY : philo_one/ft_helper_functions.s
 
 # target to generate assembly for a file
-philo_one/ft_atoi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.s
-.PHONY : philo_one/ft_atoi.c.s
+philo_one/ft_helper_functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.s
+.PHONY : philo_one/ft_helper_functions.c.s
 
 philo_one/main.o: philo_one/main.c.o
 
@@ -206,9 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... philo_one"
-	@echo "... philo_one/ft_atoi.o"
-	@echo "... philo_one/ft_atoi.i"
-	@echo "... philo_one/ft_atoi.s"
+	@echo "... philo_one/ft_helper_functions.o"
+	@echo "... philo_one/ft_helper_functions.i"
+	@echo "... philo_one/ft_helper_functions.s"
 	@echo "... philo_one/main.o"
 	@echo "... philo_one/main.i"
 	@echo "... philo_one/main.s"

@@ -1,1 +1,1 @@
-/usr/bin/cc  -g3 -Wall -Wextra -Werror -pthread -g   CMakeFiles/philo_one.dir/philo_one/main.c.o CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.o  -o philo_one 
+/usr/bin/cc  -g3 -Wall -Wextra -Werror -pthread -fsanitize=thread -g   CMakeFiles/philo_one.dir/philo_one/main.c.o CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o  -o philo_one 

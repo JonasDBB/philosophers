@@ -76,7 +76,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/jonasbb/Documents/Projects/philosophers/philo_one/ft_atoi.c">
+		<Unit filename="/home/jonasbb/Documents/Projects/philosophers/philo_one/ft_helper_functions.c">
 			<Option target="philo_one"/>
 		</Unit>
 		<Unit filename="/home/jonasbb/Documents/Projects/philosophers/philo_one/main.c">

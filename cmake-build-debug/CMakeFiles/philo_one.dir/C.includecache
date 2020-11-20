@@ -9,8 +9,6 @@
 /home/jonasbb/Documents/Projects/philosophers/philo_one/main.c
 unistd.h
 -
-stdio.h
--
 stdlib.h
 -
 pthread.h
@@ -24,5 +22,9 @@ philosophers.h
 stdbool.h
 -
 pthread.h
+-
+stddef.h
+-
+unistd.h
 -
 

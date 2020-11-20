@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.o"
+  "CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o"
   "CMakeFiles/philo_one.dir/philo_one/main.c.o"
   "philo_one"
   "philo_one.pdb"

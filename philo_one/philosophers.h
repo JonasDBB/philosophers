@@ -12,17 +12,38 @@
 
 #ifndef PHILOSOPHERS_H
 # define PHILOSOPHERS_H
+# include <stdbool.h>
+# include <pthread.h>
+# include <stddef.h>
+# include <unistd.h>
+
+bool			g_dead;
+pthread_mutex_t	g_dead_lock;
 
 typedef struct	s_arrgs {
-	int	n_philos;
-	int	die_t;
-	int	eat_t;
-	int	sleep_t;
-	int	times_eat;
+	unsigned int	n_philos;
+	unsigned int	die_t;
+	unsigned int	eat_t;
+	unsigned int	sleep_t;
+	int				times_eat;
+	unsigned long	start_t;
 	pthread_mutex_t	*forks;
-	int	philo_nr;
+	pthread_mutex_t	write_lock;
 }				t_arrgs;
 
-int		ft_atoi(const char *str);
+typedef struct	s_philo {
+	pthread_t		thread;
+	int				times_eaten;
+	unsigned int	philo_nr;
+	unsigned long	last_eaten_t;
+	pthread_mutex_t	time_check_lock;
+	t_arrgs			*args;
+}				t_philo;
+
+void			write_lock(unsigned int philo_id, const char *str, t_arrgs *args);
+int				ft_atoi(const char *str);
+
+
+unsigned long	gettime(void);
 
 #endif
