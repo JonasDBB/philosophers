@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/jonasbb/Documents/Projects/philosophers/philo_one/main.c
-unistd.h
--
-stdlib.h
--
-pthread.h
--
-sys/time.h
--
+/Users/jbennink/Documents/Projects/philosophers/philo_one/philo_loop.c
 philosophers.h
-/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
+/Users/jbennink/Documents/Projects/philosophers/philo_one/philosophers.h
 
-/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
+/Users/jbennink/Documents/Projects/philosophers/philo_one/philosophers.h
 stdbool.h
 -
 pthread.h
@@ -26,5 +18,9 @@ pthread.h
 stddef.h
 -
 unistd.h
+-
+stdlib.h
+-
+sys/time.h
 -
 

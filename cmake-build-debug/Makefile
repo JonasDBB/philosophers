@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jonasbb/Documents/Projects/philosophers
+CMAKE_SOURCE_DIR = /Users/jbennink/Documents/Projects/philosophers
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jonasbb/Documents/Projects/philosophers/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jbennink/Documents/Projects/philosophers/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/jonasbb/Documents/Projects/philosophers/cmake-build-deb
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles /home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles /Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,6 +143,33 @@ philo_one/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/build
 .PHONY : philo_one/fast
 
+philo_one/cleanup.o: philo_one/cleanup.c.o
+
+.PHONY : philo_one/cleanup.o
+
+# target to build an object file
+philo_one/cleanup.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/cleanup.c.o
+.PHONY : philo_one/cleanup.c.o
+
+philo_one/cleanup.i: philo_one/cleanup.c.i
+
+.PHONY : philo_one/cleanup.i
+
+# target to preprocess a source file
+philo_one/cleanup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/cleanup.c.i
+.PHONY : philo_one/cleanup.c.i
+
+philo_one/cleanup.s: philo_one/cleanup.c.s
+
+.PHONY : philo_one/cleanup.s
+
+# target to generate assembly for a file
+philo_one/cleanup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/cleanup.c.s
+.PHONY : philo_one/cleanup.c.s
+
 philo_one/ft_helper_functions.o: philo_one/ft_helper_functions.c.o
 
 .PHONY : philo_one/ft_helper_functions.o
@@ -169,6 +196,33 @@ philo_one/ft_helper_functions.s: philo_one/ft_helper_functions.c.s
 philo_one/ft_helper_functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.s
 .PHONY : philo_one/ft_helper_functions.c.s
+
+philo_one/locked_writing.o: philo_one/locked_writing.c.o
+
+.PHONY : philo_one/locked_writing.o
+
+# target to build an object file
+philo_one/locked_writing.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/locked_writing.c.o
+.PHONY : philo_one/locked_writing.c.o
+
+philo_one/locked_writing.i: philo_one/locked_writing.c.i
+
+.PHONY : philo_one/locked_writing.i
+
+# target to preprocess a source file
+philo_one/locked_writing.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/locked_writing.c.i
+.PHONY : philo_one/locked_writing.c.i
+
+philo_one/locked_writing.s: philo_one/locked_writing.c.s
+
+.PHONY : philo_one/locked_writing.s
+
+# target to generate assembly for a file
+philo_one/locked_writing.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/locked_writing.c.s
+.PHONY : philo_one/locked_writing.c.s
 
 philo_one/main.o: philo_one/main.c.o
 
@@ -197,6 +251,60 @@ philo_one/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/main.c.s
 .PHONY : philo_one/main.c.s
 
+philo_one/philo_loop.o: philo_one/philo_loop.c.o
+
+.PHONY : philo_one/philo_loop.o
+
+# target to build an object file
+philo_one/philo_loop.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_loop.c.o
+.PHONY : philo_one/philo_loop.c.o
+
+philo_one/philo_loop.i: philo_one/philo_loop.c.i
+
+.PHONY : philo_one/philo_loop.i
+
+# target to preprocess a source file
+philo_one/philo_loop.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_loop.c.i
+.PHONY : philo_one/philo_loop.c.i
+
+philo_one/philo_loop.s: philo_one/philo_loop.c.s
+
+.PHONY : philo_one/philo_loop.s
+
+# target to generate assembly for a file
+philo_one/philo_loop.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_loop.c.s
+.PHONY : philo_one/philo_loop.c.s
+
+philo_one/setup.o: philo_one/setup.c.o
+
+.PHONY : philo_one/setup.o
+
+# target to build an object file
+philo_one/setup.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/setup.c.o
+.PHONY : philo_one/setup.c.o
+
+philo_one/setup.i: philo_one/setup.c.i
+
+.PHONY : philo_one/setup.i
+
+# target to preprocess a source file
+philo_one/setup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/setup.c.i
+.PHONY : philo_one/setup.c.i
+
+philo_one/setup.s: philo_one/setup.c.s
+
+.PHONY : philo_one/setup.s
+
+# target to generate assembly for a file
+philo_one/setup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/setup.c.s
+.PHONY : philo_one/setup.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -206,12 +314,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... philo_one"
+	@echo "... philo_one/cleanup.o"
+	@echo "... philo_one/cleanup.i"
+	@echo "... philo_one/cleanup.s"
 	@echo "... philo_one/ft_helper_functions.o"
 	@echo "... philo_one/ft_helper_functions.i"
 	@echo "... philo_one/ft_helper_functions.s"
+	@echo "... philo_one/locked_writing.o"
+	@echo "... philo_one/locked_writing.i"
+	@echo "... philo_one/locked_writing.s"
 	@echo "... philo_one/main.o"
 	@echo "... philo_one/main.i"
 	@echo "... philo_one/main.s"
+	@echo "... philo_one/philo_loop.o"
+	@echo "... philo_one/philo_loop.i"
+	@echo "... philo_one/philo_loop.s"
+	@echo "... philo_one/setup.o"
+	@echo "... philo_one/setup.i"
+	@echo "... philo_one/setup.s"
 .PHONY : help
 
 

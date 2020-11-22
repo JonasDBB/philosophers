@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_atoi.c                                             :+:    :+:            */
+/*   ft_helper_functions.c                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jbennink <jbennink@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
@@ -12,46 +12,26 @@
 
 #include "philosophers.h"
 
-void	ft_putnbr(unsigned long n)
+unsigned long	gettime(void)
 {
-	char	c;
+	struct timeval	crn_time;
 
-	if (n >= 10)
-		ft_putnbr(n / 10);
-	c = (char)(n % 10 + '0');
-	write(1, &c, 1);
+	gettimeofday(&crn_time, NULL);
+	return (crn_time.tv_sec * 1000) + (crn_time.tv_usec / 1000);
 }
 
-size_t	ft_strlen(const char *str)
+void			faksleep(unsigned int sleep_t)
 {
-	size_t	i;
+	unsigned long start;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	start = gettime();
+	while ((gettime() - start) < sleep_t)
+	{
+		usleep(100);
+	}
 }
 
-void	write_lock(unsigned int philo_id, const char *str, t_arrgs *args)
-{
-	unsigned long	time;
-
-//	pthread_mutex_lock(&g_dead_lock);
-	if (g_dead)
-		return ;
-//	pthread_mutex_unlock(&g_dead_lock);
-	time = gettime() - args->start_t;
-	pthread_mutex_lock(&args->write_lock);
-	ft_putnbr(time);
-	write(1, " : [", 4);
-	ft_putnbr(philo_id);
-	write(1, "] ", 2);
-	write(1, str, ft_strlen(str));
-	write(1, "\n", 1);
-	pthread_mutex_unlock(&args->write_lock);
-}
-
-int		ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
 	long	result;
 	int		sign;
@@ -61,7 +41,7 @@ int		ft_atoi(const char *str)
 	result = 0;
 	sign = 1;
 	while (*str == ' ' || *str == '\t' || *str == '\r'
-		   || *str == '\n' || *str == '\v' || *str == '\f')
+			|| *str == '\n' || *str == '\v' || *str == '\f')
 		str++;
 	if (*str == '-' || *str == '+')
 	{
