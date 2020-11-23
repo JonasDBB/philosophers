@@ -43,6 +43,7 @@ int		monitor_philos(t_arrgs *args, t_philo *philos)
 		sem_post(args->death_sem);
 		i++;
 	}
+	usleep(500);
 	if (stop)
 		return (1);
 	return (0);

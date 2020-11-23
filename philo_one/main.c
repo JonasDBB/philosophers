@@ -43,6 +43,7 @@ int		monitor_philos(t_arrgs *args, t_philo *philos)
 		pthread_mutex_unlock(&philos[i].time_check_lock);
 		i++;
 	}
+	usleep(500);
 	if (stop)
 		return (1);
 	return (0);
