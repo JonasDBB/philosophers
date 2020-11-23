@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named philo_two
+
+# Build rule for target.
+philo_two: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 philo_two
+.PHONY : philo_two
+
+# fast build rule for target.
+philo_two/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/build
+.PHONY : philo_two/fast
+
+#=============================================================================
 # Target rules for targets named philo_one
 
 # Build rule for target.
@@ -305,6 +318,168 @@ philo_one/setup.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/setup.c.s
 .PHONY : philo_one/setup.c.s
 
+philo_two/cleanup.o: philo_two/cleanup.c.o
+
+.PHONY : philo_two/cleanup.o
+
+# target to build an object file
+philo_two/cleanup.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/cleanup.c.o
+.PHONY : philo_two/cleanup.c.o
+
+philo_two/cleanup.i: philo_two/cleanup.c.i
+
+.PHONY : philo_two/cleanup.i
+
+# target to preprocess a source file
+philo_two/cleanup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/cleanup.c.i
+.PHONY : philo_two/cleanup.c.i
+
+philo_two/cleanup.s: philo_two/cleanup.c.s
+
+.PHONY : philo_two/cleanup.s
+
+# target to generate assembly for a file
+philo_two/cleanup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/cleanup.c.s
+.PHONY : philo_two/cleanup.c.s
+
+philo_two/ft_helper_functions.o: philo_two/ft_helper_functions.c.o
+
+.PHONY : philo_two/ft_helper_functions.o
+
+# target to build an object file
+philo_two/ft_helper_functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_helper_functions.c.o
+.PHONY : philo_two/ft_helper_functions.c.o
+
+philo_two/ft_helper_functions.i: philo_two/ft_helper_functions.c.i
+
+.PHONY : philo_two/ft_helper_functions.i
+
+# target to preprocess a source file
+philo_two/ft_helper_functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_helper_functions.c.i
+.PHONY : philo_two/ft_helper_functions.c.i
+
+philo_two/ft_helper_functions.s: philo_two/ft_helper_functions.c.s
+
+.PHONY : philo_two/ft_helper_functions.s
+
+# target to generate assembly for a file
+philo_two/ft_helper_functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_helper_functions.c.s
+.PHONY : philo_two/ft_helper_functions.c.s
+
+philo_two/locked_writing.o: philo_two/locked_writing.c.o
+
+.PHONY : philo_two/locked_writing.o
+
+# target to build an object file
+philo_two/locked_writing.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/locked_writing.c.o
+.PHONY : philo_two/locked_writing.c.o
+
+philo_two/locked_writing.i: philo_two/locked_writing.c.i
+
+.PHONY : philo_two/locked_writing.i
+
+# target to preprocess a source file
+philo_two/locked_writing.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/locked_writing.c.i
+.PHONY : philo_two/locked_writing.c.i
+
+philo_two/locked_writing.s: philo_two/locked_writing.c.s
+
+.PHONY : philo_two/locked_writing.s
+
+# target to generate assembly for a file
+philo_two/locked_writing.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/locked_writing.c.s
+.PHONY : philo_two/locked_writing.c.s
+
+philo_two/main.o: philo_two/main.c.o
+
+.PHONY : philo_two/main.o
+
+# target to build an object file
+philo_two/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/main.c.o
+.PHONY : philo_two/main.c.o
+
+philo_two/main.i: philo_two/main.c.i
+
+.PHONY : philo_two/main.i
+
+# target to preprocess a source file
+philo_two/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/main.c.i
+.PHONY : philo_two/main.c.i
+
+philo_two/main.s: philo_two/main.c.s
+
+.PHONY : philo_two/main.s
+
+# target to generate assembly for a file
+philo_two/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/main.c.s
+.PHONY : philo_two/main.c.s
+
+philo_two/philo_loop.o: philo_two/philo_loop.c.o
+
+.PHONY : philo_two/philo_loop.o
+
+# target to build an object file
+philo_two/philo_loop.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_loop.c.o
+.PHONY : philo_two/philo_loop.c.o
+
+philo_two/philo_loop.i: philo_two/philo_loop.c.i
+
+.PHONY : philo_two/philo_loop.i
+
+# target to preprocess a source file
+philo_two/philo_loop.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_loop.c.i
+.PHONY : philo_two/philo_loop.c.i
+
+philo_two/philo_loop.s: philo_two/philo_loop.c.s
+
+.PHONY : philo_two/philo_loop.s
+
+# target to generate assembly for a file
+philo_two/philo_loop.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_loop.c.s
+.PHONY : philo_two/philo_loop.c.s
+
+philo_two/setup.o: philo_two/setup.c.o
+
+.PHONY : philo_two/setup.o
+
+# target to build an object file
+philo_two/setup.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/setup.c.o
+.PHONY : philo_two/setup.c.o
+
+philo_two/setup.i: philo_two/setup.c.i
+
+.PHONY : philo_two/setup.i
+
+# target to preprocess a source file
+philo_two/setup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/setup.c.i
+.PHONY : philo_two/setup.c.i
+
+philo_two/setup.s: philo_two/setup.c.s
+
+.PHONY : philo_two/setup.s
+
+# target to generate assembly for a file
+philo_two/setup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/setup.c.s
+.PHONY : philo_two/setup.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -314,6 +489,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... philo_one"
+	@echo "... philo_two"
 	@echo "... philo_one/cleanup.o"
 	@echo "... philo_one/cleanup.i"
 	@echo "... philo_one/cleanup.s"
@@ -332,6 +508,24 @@ help:
 	@echo "... philo_one/setup.o"
 	@echo "... philo_one/setup.i"
 	@echo "... philo_one/setup.s"
+	@echo "... philo_two/cleanup.o"
+	@echo "... philo_two/cleanup.i"
+	@echo "... philo_two/cleanup.s"
+	@echo "... philo_two/ft_helper_functions.o"
+	@echo "... philo_two/ft_helper_functions.i"
+	@echo "... philo_two/ft_helper_functions.s"
+	@echo "... philo_two/locked_writing.o"
+	@echo "... philo_two/locked_writing.i"
+	@echo "... philo_two/locked_writing.s"
+	@echo "... philo_two/main.o"
+	@echo "... philo_two/main.i"
+	@echo "... philo_two/main.s"
+	@echo "... philo_two/philo_loop.o"
+	@echo "... philo_two/philo_loop.i"
+	@echo "... philo_two/philo_loop.s"
+	@echo "... philo_two/setup.o"
+	@echo "... philo_two/setup.i"
+	@echo "... philo_two/setup.s"
 .PHONY : help
 
 
