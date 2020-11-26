@@ -20,6 +20,7 @@
 # include <stdlib.h>
 # include <sys/time.h>
 # include <fcntl.h>
+# include <sys/wait.h>
 
 typedef struct	s_arrgs {
 	bool			dead;
@@ -30,35 +31,31 @@ typedef struct	s_arrgs {
 	int				times_eat;
 	unsigned long	start_t;
 	sem_t			*forks;
-	sem_t			*death_sem;
+//	sem_t			*death_sem;
 	sem_t			*write_sem;
 }				t_arrgs;
 
 typedef struct	s_philo {
-	pthread_t		thread;
 	int				times_eaten;
 	unsigned int	philo_nr;
 	unsigned long	last_eaten_t;
+	sem_t			*death_sem;
 //	sem_t			*t_check_sem;
 	t_arrgs			*args;
 }				t_philo;
-
-int				start_threads(t_arrgs *args, t_philo *philos);
 
 /*
 ** setup.c
 */
 int				check_and_set_input(int ac, char **av, t_arrgs *args);
-int				setup_malloc(t_arrgs *args, t_philo **philos);
+int				setup_malloc(t_arrgs *args, t_philo **philos, pid_t **pids);
 int				create_sems(t_arrgs *args, t_philo *philos);
-int				init_philos(t_arrgs *args, t_philo *philos);
+void			init_philos(t_arrgs *args, t_philo *philos);
 
 /*
 ** cleanup.c
 */
 void			destroy_sems(t_arrgs *args, t_philo *philos);
-void			destroy_time_sems(t_philo *philos, unsigned int i);
-void			join_threads(t_philo *philos, unsigned int i);
 
 /*
 ** locked_writing.c

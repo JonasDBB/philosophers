@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/jbennink/Documents/Projects/philosophers/philo_one/cleanup.c" "/Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/cleanup.c.o"
-  "/Users/jbennink/Documents/Projects/philosophers/philo_one/ft_helper_functions.c" "/Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o"
-  "/Users/jbennink/Documents/Projects/philosophers/philo_one/locked_writing.c" "/Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/locked_writing.c.o"
-  "/Users/jbennink/Documents/Projects/philosophers/philo_one/main.c" "/Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/main.c.o"
-  "/Users/jbennink/Documents/Projects/philosophers/philo_one/philo_loop.c" "/Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/philo_loop.c.o"
-  "/Users/jbennink/Documents/Projects/philosophers/philo_one/setup.c" "/Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/setup.c.o"
+  "/home/jonasbb/Documents/Projects/philosophers/philo_one/cleanup.c" "/home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/cleanup.c.o"
+  "/home/jonasbb/Documents/Projects/philosophers/philo_one/ft_helper_functions.c" "/home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/ft_helper_functions.c.o"
+  "/home/jonasbb/Documents/Projects/philosophers/philo_one/locked_writing.c" "/home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/locked_writing.c.o"
+  "/home/jonasbb/Documents/Projects/philosophers/philo_one/main.c" "/home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/main.c.o"
+  "/home/jonasbb/Documents/Projects/philosophers/philo_one/philo_loop.c" "/home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/philo_loop.c.o"
+  "/home/jonasbb/Documents/Projects/philosophers/philo_one/setup.c" "/home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/philo_one.dir/philo_one/setup.c.o"
   )
-set(CMAKE_C_COMPILER_ID "AppleClang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

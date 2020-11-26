@@ -25,7 +25,7 @@ void	destroy_time_sems(t_philo *philos, unsigned int i)
 	while (i)
 	{
 		i--;
-		sem_close(philos[i].t_check_sem);
+//		sem_close(philos[i].t_check_sem);
 	}
 	destroy_sems(philos[0].args, philos);
 }

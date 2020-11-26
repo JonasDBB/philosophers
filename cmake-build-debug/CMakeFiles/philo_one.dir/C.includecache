@@ -6,11 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/Users/jbennink/Documents/Projects/philosophers/philo_one/main.c
+/home/jonasbb/Documents/Projects/philosophers/philo_one/cleanup.c
 philosophers.h
-/Users/jbennink/Documents/Projects/philosophers/philo_one/philosophers.h
+/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
 
-/Users/jbennink/Documents/Projects/philosophers/philo_one/philosophers.h
+/home/jonasbb/Documents/Projects/philosophers/philo_one/ft_helper_functions.c
+philosophers.h
+/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
+
+/home/jonasbb/Documents/Projects/philosophers/philo_one/locked_writing.c
+philosophers.h
+/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
+
+/home/jonasbb/Documents/Projects/philosophers/philo_one/main.c
+philosophers.h
+/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
+
+/home/jonasbb/Documents/Projects/philosophers/philo_one/philo_loop.c
+philosophers.h
+/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
+
+/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
 stdbool.h
 -
 pthread.h
@@ -23,4 +39,8 @@ stdlib.h
 -
 sys/time.h
 -
+
+/home/jonasbb/Documents/Projects/philosophers/philo_one/setup.c
+philosophers.h
+/home/jonasbb/Documents/Projects/philosophers/philo_one/philosophers.h
 

@@ -92,12 +92,12 @@ int			init_philos(t_arrgs *args, t_philo *philos)
 		philos[i].args = args;
 		philos[i].last_eaten_t = (*args).start_t;
 		philos[i].times_eaten = 0;
-		philos[i].t_check_sem = sem_open("t_check", O_CREAT, 0644, 1);
-		if (philos[i].t_check_sem == SEM_FAILED)
-		{
-			destroy_time_sems(philos, i);
-			return (1);
-		}
+//		philos[i].t_check_sem = sem_open("t_check", O_CREAT, 0644, 1);
+//		if (philos[i].t_check_sem == SEM_FAILED)
+//		{
+//			destroy_time_sems(philos, i);
+//			return (1);
+//		}
 		sem_unlink("time_check");
 		i++;
 	}

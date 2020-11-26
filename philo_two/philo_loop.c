@@ -79,6 +79,7 @@ int			start_threads(t_arrgs *args, t_philo *philos)
 			join_threads(philos, i);
 			return (1);
 		}
+		usleep(10);
 		i++;
 	}
 	return (0);
