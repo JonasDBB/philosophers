@@ -59,10 +59,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/135/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/135/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/jonasbb/Documents/Projects/philosophers/cmake-build-deb
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/135/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/135/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -385,6 +385,60 @@ philo_three/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/main.c.s
 .PHONY : philo_three/main.c.s
 
+philo_three/philo_loop.o: philo_three/philo_loop.c.o
+
+.PHONY : philo_three/philo_loop.o
+
+# target to build an object file
+philo_three/philo_loop.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/philo_loop.c.o
+.PHONY : philo_three/philo_loop.c.o
+
+philo_three/philo_loop.i: philo_three/philo_loop.c.i
+
+.PHONY : philo_three/philo_loop.i
+
+# target to preprocess a source file
+philo_three/philo_loop.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/philo_loop.c.i
+.PHONY : philo_three/philo_loop.c.i
+
+philo_three/philo_loop.s: philo_three/philo_loop.c.s
+
+.PHONY : philo_three/philo_loop.s
+
+# target to generate assembly for a file
+philo_three/philo_loop.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/philo_loop.c.s
+.PHONY : philo_three/philo_loop.c.s
+
+philo_three/setup.o: philo_three/setup.c.o
+
+.PHONY : philo_three/setup.o
+
+# target to build an object file
+philo_three/setup.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/setup.c.o
+.PHONY : philo_three/setup.c.o
+
+philo_three/setup.i: philo_three/setup.c.i
+
+.PHONY : philo_three/setup.i
+
+# target to preprocess a source file
+philo_three/setup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/setup.c.i
+.PHONY : philo_three/setup.c.i
+
+philo_three/setup.s: philo_three/setup.c.s
+
+.PHONY : philo_three/setup.s
+
+# target to generate assembly for a file
+philo_three/setup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/setup.c.s
+.PHONY : philo_three/setup.c.s
+
 philo_two/cleanup.o: philo_two/cleanup.c.o
 
 .PHONY : philo_two/cleanup.o
@@ -585,6 +639,12 @@ help:
 	@echo "... philo_three/main.o"
 	@echo "... philo_three/main.i"
 	@echo "... philo_three/main.s"
+	@echo "... philo_three/philo_loop.o"
+	@echo "... philo_three/philo_loop.i"
+	@echo "... philo_three/philo_loop.s"
+	@echo "... philo_three/setup.o"
+	@echo "... philo_three/setup.i"
+	@echo "... philo_three/setup.s"
 	@echo "... philo_two/cleanup.o"
 	@echo "... philo_two/cleanup.i"
 	@echo "... philo_two/cleanup.s"

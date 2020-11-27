@@ -39,7 +39,6 @@ typedef struct	s_philo {
 	int				times_eaten;
 	unsigned int	philo_nr;
 	unsigned long	last_eaten_t;
-//	sem_t			*t_check_sem;
 	t_arrgs			*args;
 }				t_philo;
 
@@ -57,7 +56,6 @@ int				init_philos(t_arrgs *args, t_philo *philos);
 ** cleanup.c
 */
 void			destroy_sems(t_arrgs *args, t_philo *philos);
-void			destroy_time_sems(t_philo *philos, unsigned int i);
 void			join_threads(t_philo *philos, unsigned int i);
 
 /*

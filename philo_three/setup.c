@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   setup.c                                            :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: jbennink <jbennink@student.codam.nl>         +#+                     */
+/*   By: jonasbb <jonasbb@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/22 19:31:21 by jbennink      #+#    #+#                 */
-/*   Updated: 2020/11/22 19:31:21 by jbennink      ########   odam.nl         */
+/*   Created: 2020/11/27 17:31:40 by jonasbb       #+#    #+#                 */
+/*   Updated: 2020/11/27 17:31:40 by jonasbb       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,17 @@ int			check_and_set_input(int ac, char **av, t_arrgs *args)
 	return (0);
 }
 
-int			setup_malloc(t_arrgs *args, t_philo **philos)
+int			setup_malloc(t_arrgs *args, t_philo **philos, pid_t **pids)
 {
 	(*philos) = malloc(sizeof(t_philo) * (*args).n_philos);
 	if (!(*philos))
 		return (1);
+	(*pids) = malloc(sizeof(pid_t) * (*args).n_philos);
+	if (!(*pids))
+	{
+		free(*philos);
+		return (1);
+	}
 	return (0);
 }
 
@@ -64,13 +70,6 @@ int			create_sems(t_arrgs *args, t_philo *philos)
 		return (1);
 	}
 	sem_unlink("forks");
-	args->death_sem = sem_open("death", O_CREAT | O_EXCL, 0644, 1);
-	if (args->death_sem == SEM_FAILED)
-	{
-		free(philos);
-		return (1);
-	}
-	sem_unlink("death");
 	args->write_sem = sem_open("write", O_CREAT | O_EXCL, 0644, 1);
 	if (args->write_sem == SEM_FAILED)
 	{
@@ -81,7 +80,7 @@ int			create_sems(t_arrgs *args, t_philo *philos)
 	return (0);
 }
 
-int			init_philos(t_arrgs *args, t_philo *philos)
+void		init_philos(t_arrgs *args, t_philo *philos)
 {
 	unsigned int	i;
 
@@ -92,8 +91,6 @@ int			init_philos(t_arrgs *args, t_philo *philos)
 		philos[i].args = args;
 		philos[i].last_eaten_t = (*args).start_t;
 		philos[i].times_eaten = 0;
-		sem_unlink("time_check");
 		i++;
 	}
-	return (0);
 }

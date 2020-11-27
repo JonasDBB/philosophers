@@ -21,6 +21,7 @@
 # include <sys/time.h>
 # include <fcntl.h>
 # include <sys/wait.h>
+# define INFECT SIGKILL
 
 typedef struct	s_arrgs {
 	bool			dead;
@@ -31,7 +32,6 @@ typedef struct	s_arrgs {
 	int				times_eat;
 	unsigned long	start_t;
 	sem_t			*forks;
-//	sem_t			*death_sem;
 	sem_t			*write_sem;
 }				t_arrgs;
 
@@ -40,7 +40,6 @@ typedef struct	s_philo {
 	unsigned int	philo_nr;
 	unsigned long	last_eaten_t;
 	sem_t			*death_sem;
-//	sem_t			*t_check_sem;
 	t_arrgs			*args;
 }				t_philo;
 
@@ -53,14 +52,15 @@ int				create_sems(t_arrgs *args, t_philo *philos);
 void			init_philos(t_arrgs *args, t_philo *philos);
 
 /*
-** cleanup.c
-*/
-void			destroy_sems(t_arrgs *args, t_philo *philos);
-
-/*
 ** locked_writing.c
 */
 void			wr_lock(unsigned int philo_id, const char *str, t_arrgs *args);
+
+/*
+** philo_loop.c
+*/
+int				monitor_philos(t_philo *philo);
+void			*philo_loop(void *phil_ptr);
 
 /*
 ** ft_helper_functions.c

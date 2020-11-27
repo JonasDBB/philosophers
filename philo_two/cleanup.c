@@ -20,16 +20,6 @@ void	destroy_sems(t_arrgs *args, t_philo *philos)
 	free(philos);
 }
 
-void	destroy_time_sems(t_philo *philos, unsigned int i)
-{
-	while (i)
-	{
-		i--;
-//		sem_close(philos[i].t_check_sem);
-	}
-	destroy_sems(philos[0].args, philos);
-}
-
 void	join_threads(t_philo *philos, unsigned int i)
 {
 	while (i)
@@ -37,5 +27,5 @@ void	join_threads(t_philo *philos, unsigned int i)
 		i--;
 		pthread_join(philos[i].thread, NULL);
 	}
-	destroy_time_sems(philos, philos[0].args->n_philos);
+	destroy_sems(philos[0].args, philos);
 }

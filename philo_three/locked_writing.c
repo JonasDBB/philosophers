@@ -36,13 +36,6 @@ void			wr_lock(unsigned int philo_id, const char *str, t_arrgs *args)
 {
 	unsigned long	time;
 
-//	sem_wait(args->death_sem);
-//	if (args->dead)
-//	{
-//		sem_post(args->death_sem);
-//		return ;
-//	}
-//	sem_post(args->death_sem);
 	time = gettime() - args->start_t;
 	sem_wait(args->write_sem);
 	ft_putnbr(time);

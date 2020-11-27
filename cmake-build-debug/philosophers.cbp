@@ -179,6 +179,12 @@
 		<Unit filename="/home/jonasbb/Documents/Projects/philosophers/philo_three/main.c">
 			<Option target="philo_three"/>
 		</Unit>
+		<Unit filename="/home/jonasbb/Documents/Projects/philosophers/philo_three/philo_loop.c">
+			<Option target="philo_three"/>
+		</Unit>
+		<Unit filename="/home/jonasbb/Documents/Projects/philosophers/philo_three/setup.c">
+			<Option target="philo_three"/>
+		</Unit>
 		<Unit filename="/home/jonasbb/Documents/Projects/philosophers/philo_two/cleanup.c">
 			<Option target="philo_two"/>
 		</Unit>
