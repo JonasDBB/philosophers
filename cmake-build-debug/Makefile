@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/135/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/135/bin/cmake/linux/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jonasbb/Documents/Projects/philosophers
+CMAKE_SOURCE_DIR = /Users/jbennink/Documents/Projects/philosophers
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jonasbb/Documents/Projects/philosophers/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jbennink/Documents/Projects/philosophers/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/jonasbb/Documents/Projects/philosophers/cmake-build-deb
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/135/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/135/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles /home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles /Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jonasbb/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jbennink/Documents/Projects/philosophers/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,19 +131,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named philo_two
-
-# Build rule for target.
-philo_two: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 philo_two
-.PHONY : philo_two
-
-# fast build rule for target.
-philo_two/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/build
-.PHONY : philo_two/fast
-
-#=============================================================================
 # Target rules for targets named philo_three
 
 # Build rule for target.
@@ -155,6 +142,19 @@ philo_three: cmake_check_build_system
 philo_three/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/build
 .PHONY : philo_three/fast
+
+#=============================================================================
+# Target rules for targets named philo_two
+
+# Build rule for target.
+philo_two: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 philo_two
+.PHONY : philo_two
+
+# fast build rule for target.
+philo_two/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/build
+.PHONY : philo_two/fast
 
 #=============================================================================
 # Target rules for targets named philo_one
@@ -472,8 +472,8 @@ philo_two/ft_helper_functions.o: philo_two/ft_helper_functions.c.o
 
 # target to build an object file
 philo_two/ft_helper_functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_helper_functions.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_two/ft_helper_functions.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_helper_functions.c.o
 .PHONY : philo_two/ft_helper_functions.c.o
 
 philo_two/ft_helper_functions.i: philo_two/ft_helper_functions.c.i
@@ -482,8 +482,8 @@ philo_two/ft_helper_functions.i: philo_two/ft_helper_functions.c.i
 
 # target to preprocess a source file
 philo_two/ft_helper_functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_helper_functions.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_two/ft_helper_functions.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_helper_functions.c.i
 .PHONY : philo_two/ft_helper_functions.c.i
 
 philo_two/ft_helper_functions.s: philo_two/ft_helper_functions.c.s
@@ -492,8 +492,8 @@ philo_two/ft_helper_functions.s: philo_two/ft_helper_functions.c.s
 
 # target to generate assembly for a file
 philo_two/ft_helper_functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_helper_functions.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_two/ft_helper_functions.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_helper_functions.c.s
 .PHONY : philo_two/ft_helper_functions.c.s
 
 philo_two/locked_writing.o: philo_two/locked_writing.c.o

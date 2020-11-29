@@ -15,12 +15,12 @@
 # include <stdbool.h>
 # include <pthread.h>
 # include <semaphore.h>
-# include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <sys/time.h>
 # include <fcntl.h>
 # include <sys/wait.h>
+# include <signal.h>
 # define INFECT SIGKILL
 
 typedef struct	s_arrgs {

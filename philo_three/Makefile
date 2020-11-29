@@ -12,8 +12,7 @@
 
 NAME = philo_three
 
-SRCS = cleanup.c \
-	   ft_helper_functions.c \
+SRCS = ft_helper_functions.c \
 	   locked_writing.c \
 	   main.c \
 	   philo_loop.c \
@@ -32,10 +31,10 @@ endif
 
 all: $(NAME)
 
-%.o: %.c
+%.o: %.c $(INCL)
 	gcc $(FLAGS) -c $< -o $@
 
-$(NAME): $(OBJS) $(INCL)
+$(NAME): $(OBJS)
 	gcc $(FLAGS) -o $(NAME) $(OBJS)
 
 clean:
